@@ -18,7 +18,7 @@ class ObserverList {
     return null;
   }
 
-  indexOf(obj, startIndex) {
+  indexOf(obj) {
     return this.ObserverList.indexOf(obj);
   }
 
@@ -67,14 +67,14 @@ class Observer {
 }
 
 const runNewExample = () => {
-  let controlCheckboxNode = document.getElementById('mainCheckbox');
-  let addBtnNode = document.getElementById('addNewObserver');
-  let containerNode = document.getElementById('observersContainer');
+  const controlCheckboxNode = document.getElementById('mainCheckbox');
+  const addBtnNode = document.getElementById('addNewObserver');
+  const containerNode = document.getElementById('observersContainer');
 
   // Concrete Subject
 
   // Extend the controlling checkbox with the Subject class
-  let controlCheckbox = new Subject(controlCheckboxNode);
+  const controlCheckbox = new Subject(controlCheckboxNode);
 
   // Clicking the checkbox will trigger notifications to its observers
   controlCheckbox.getNode().addEventListener('click', () => {
